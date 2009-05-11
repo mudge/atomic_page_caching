@@ -1,0 +1,10 @@
+Atomic Page Caching
+=================
+
+Rails' own caches_page helper uses File.write to cache pages which may not
+be an atomic operation.
+
+This plugin adds a new method, atomically_caches_page, which uses File.mv
+to atomically replace cached pages.
+
+Copyright (c) 2009 Paul Mucur, BeatThatQuote.com, released under the MIT license
